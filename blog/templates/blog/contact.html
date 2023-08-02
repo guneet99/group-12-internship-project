@@ -1,0 +1,120 @@
+{% extends "blog/dashboard_main.html" %}
+{% load static %}
+{% block content %}
+
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row">
+            <div class="col-12 grid-margin stretch-card">
+              <div class="card corona-gradient-card">
+              
+              </div>
+            </div>
+            </div>
+            <center>
+            <div class="content-section">
+              
+                <div class="media">
+                
+                  <!-- <img class="rounded-circle account-img" src="{% static 'assets/images/faces/face2.jpg' %}"> -->
+                  <div class="media-body">
+                    <h2 class="account-heading">FitZone: Your Transformation Matters</h2>
+                    <p class="text-secondary"></p>
+                  </div>
+                </div><br><br>
+               
+               
+            <div class="container">
+              
+              <!-- Trigger the modal with a button -->
+              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Call</button>
+              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Mail</button>
+              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3">SMS</button>
+              <!-- Modal -->
+              <div class="modal fade" id="myModal1" role="dialog">
+                <div class="modal-dialog">
+                
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                    
+                      <h4 style="text-align:left" class="modal-title">You have choose the call option</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                   
+                    <form action="POST" method="GET" class="form-container"> {% csrf_token %}
+                      <p><br>Do you really want to call?</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn btn-default" name="callbutton">Yes</button>
+                      <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                    </div>
+                  </form>
+                  
+                </div>
+              </div>
+
+              <div class="modal fade" id="myModal2" role="dialog">
+                <div class="modal-dialog">
+                
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                      <h4 class="modal-title" style="text-align:left">You have choose the mail option</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="POST" method="GET" class="form-container"> {% csrf_token %}
+                        <label for="message"><b>Message</b></label><br>
+                        <textarea type ="text" name="mail" rows="10" cols="30" placeholder="Type Your Message Here" required></textarea>
+                        <br>          
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn btn-default" name="mailbutton">Send</button>
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    </div>
+                  </form>
+                  </div>
+                </div>
+              </div> 
+              <div class="modal fade" id="myModal3" role="dialog">
+                <div class="modal-dialog">
+                
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title" style="text-align:left">You have the choose to send sms</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="POST" method="GET" class="form-container"> {% csrf_token %}
+                        <label for="message"><b>Message</b></label><br>
+                        <textarea type ="text" name="sms" rows="10" cols="30" placeholder="Type Your Message Here" required></textarea>
+                        <br>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn btn-default" name="smsbutton">Send</button>
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    </div>
+                  </form>
+                  </div>
+                  
+                </div>
+              </div> 
+              
+            </div>
+
+          </center>
+
+          </div>
+          
+          
+        </div>
+    </div>
+</div>
+</div>
+
+        
+{% endblock content %}
+  

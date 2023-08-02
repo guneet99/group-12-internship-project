@@ -1,0 +1,86 @@
+{% extends "blog/dashboard_main.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row">
+             <div class="col-12 grid-margin stretch-card">
+              <div class="card corona-gradient-card">
+              
+              </div>
+             </div>
+            </div>
+            <center>
+              <form action="POST" method="GET" class="form-container"> {% csrf_token %} <h1>FitZone: Your Transformation Matters &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button type="submit" class="btn btn-info btn-lg" style="font-size: 20px; background-color:#0B6D7D; border: none;" data-toggle="modal" data-target="#myModal1"><i style="font-size: 22px;" class="fa fa-download"></i>&nbsp;Download</button></h1></form>
+              <br>
+                <div class="col-lg-11 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h2 class="card-title">Diet Plan</h2>
+                      <br>
+                      <div class="table-responsive">
+                        <table class="table table-hover">
+                          <thead>
+                            <tr>
+                              <th><h4 style="color:white"> Meals </h4></th>
+                              <th><h4 style="color:white"> Timing </h4></th>
+                              <th><h4 style="color:white"> Food </h4></th>
+                              <!-- <th><h4 style="color:white"> Recipe </h4> </th> -->
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><h4> Early Morning</h4> </td>
+                              <td> 8 am </td>
+                              <td> Luke Warm Water with 1 spoon of Honey and ½ Lemon</td>
+                              <!-- <td><a class="badge badge-info" href="https://www.youtube.com/watch?v=pJlE3CHP-Ac">Link</a></td> -->
+                            </tr>
+                            <tr>
+                              <td><h4> Breakfast</h4> </td>
+                              <td> 9 am </td>
+                              <td> 2 Boiled Eggs, Multigrain Toast with Black Coffee.<br><br>Oats with Protein Scoop and Black Coffee<br><br>Smoothie </td>
+                              <!-- <td><a class="badge badge-info" href="https://www.youtube.com/watch?v=pJlE3CHP-Ac">Link</a></td> -->
+                            </tr>
+                            <tr>
+                              <td><h4>Morning Snacks </h4></td>
+                              <td> 11 am </td>
+                              <td> 1 Cup Fresh Yogurt<br><br>1 Apple<br><br> A Handful of Almonds or Walnuts </td>
+                              <!-- <td> July 1, 2015 </td> -->
+                            </tr>
+                            <tr>
+                              <td><h4> Lunch </h4></td>
+                              <td> 2 pm </td>
+                              <td> 1 Chapati, 1 Plate Rice, 1 Cup Dal, ½ Cup Vegetables and 1 Bowl Salad.</td>
+                              <!-- <td> dfvfvvvvvvvvvvv5 </td> -->
+                            </tr>
+                            <tr>
+                              <td><h4> Pre-Workout </h4></td>
+                              <td> 5 pm </td>
+                              <td> 4 Banana<br><br>4 Egg Whites <br><br>2 Bread Slices <br><br>1 Cup Moong Bean Sprouts<br><br>1 Scoop Glutamine </td>
+                              <!-- <td> May 15, 2015 </td> -->
+                            </tr>
+                            <tr>
+                              <td><h4> Post-Workout </h4></td>
+                              <td> 7 pm </td>
+                              <td> 2 Scoop Whey Protein in water with 4 Whole Eggs.<br><br>2 Scoop Whey Protein in water with Sweet Potato or 100gm Paneer  </td>
+                              <!-- <td> May 03, 2015 </td> -->
+                            </tr>
+                            <tr>
+                              <td><h4> Dinner </h4></td>
+                              <td> 9 pm </td>
+                              <td> 1 Chapati, ½ Cup Vegetable Curry and 1 Bowl of Salad.<br><br>
+                                 Grilled Chicken 200gm with ½ Cup of Boiled Rice and Salad
+                                 </td>
+                              <!-- <td> April 05, 2015 </td> -->
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </center>
+          </div>
+        </div>
+{% endblock content %}     

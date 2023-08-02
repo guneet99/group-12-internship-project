@@ -1,0 +1,122 @@
+{% extends "blog/dashboard_main.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row">
+            <div class="col-12 grid-margin stretch-card">
+              <div class="card corona-gradient-card">
+                                                                                                                                                                                                                          <!-- <button class="btn"><i class="fa fa-home"></i> Home</button> -->
+              </div>
+            </div>
+            </div>
+            <center>
+              <form action="POST" method="GET" class="form-container"> {% csrf_token %} <h1>FitZone: Your Transformation Matters &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="C:/Users/home/Desktop/django_web_app/CFG.pdf" download> <button type="submit" class="btn btn-info btn-lg" style="font-size: 20px; background-color:#0B6D7D; border: none;"><i style="font-size: 22px;" class="fa fa-download" ></i>&nbsp;Download</button></a></h1></form>
+              <!-- <h1>FitZone: Your Transformation Matters</h1> -->
+              <br>
+              <div class="col-lg-11 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h2 class="card-title">Exercise Schedule<br><br></h2>
+                    <div class="table-responsive">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th><h4 style="color:white">Day</h4></th>
+                            <th><h4 style="color:white">Body Part</h4></th>
+                            <th><h4 style="color:white">Exercise Name</h4></th>
+                            <th><h4 style="color:white">Video Link</h4></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><h4>Monday</h4></td>
+                            <td><h4>Chest</h4></td>
+                            <td><h5>Cable Cross-Over<br><br>Push-Ups<br><br>Barbell Bench Press<br><br>Incline Dumbbell Bench Press<br><br>Decline Barbell Bench Press<br><br>Dip<br><br>Plate Press-Out </h5></td>
+                            <td><a class="badge badge-info" style="font-size: 16px; background-color:#0B6D7D; border: none;" href="https://www.youtube.com/watch?v=pJlE3CHP-Ac" target="_blank">Video Link</a></td>
+                            <!-- <td><label class="badge badge-danger">Pending</label></td> -->
+                          </tr>
+                          <tr>
+                            <td><h4>Tuesday</h4></td>
+                            <td><h4>Shoulder</h4></td>
+                            <td><h5>Barbell Overhead Shoulder Press<br><br>Seated Dumbbell Shoulder Press<br><br>Front Raise<br><br>Reverse Pec Deck Fly<br><br>Bent-Over Dumbbell Lateral Raise<br><br>Push Press<br><br>Standing Barbell Shrugs</h5></td>
+                            <td><a class="badge badge-info" style="font-size: 16px; background-color:#0B6D7D; border: none;" href="https://www.youtube.com/watch?v=PUPiRVDTAEk" target="_blank">Video Link</a></td>
+                            <!-- <td><label class="badge badge-warning">In progress</label></td> -->
+                          </tr>
+                          <tr>
+                            <td><h4>Wednesday</h4></td>
+                            <td><h4>Biceps</h4></td>
+                            <td><h5>Alternating Incline Dumbbell Curl<br><br>Seated Alternating Hammer Curl<br><br>Standing Reverse Barbell Curl<br><br>Standing Cable Curl<br><br>Decline Dumbbell Curl<br><br>Concentration Curl<br><br>Cable Flex Curl</h5></td>
+                            <td><a class="badge badge-info" style="font-size: 16px; background-color:#0B6D7D; border: none;" href="https://www.youtube.com/watch?v=CLccU7tk7es" target="_blank">Video Link</a></td>
+                            <!-- <td><label class="badge badge-info">Fixed</label></td> -->
+                          </tr>
+                          <tr>
+                            <td><h4>Thursday</h4></td>
+                            <td><h4>Back</h4></td>
+                            <td><h5><br>Barbell Deadlift<br><br>Bent-Over Barbell Row<br><br>Wide-Grip Pull-Up<br><br>Standing T-Bar Row<br><br>Wide-Grip Seated Cable Row<br><br>Close-Grip Pull-Down<br><br>Decline Bench Dumbbell Pull-Over</h5></td>
+                            <td><a class="badge badge-info" style="font-size: 16px; background-color:#0B6D7D; border: none;" href="https://www.youtube.com/watch?v=hdXH1P_qKCI" target="_blank">Video Link</a></td>
+                            <!-- <td><label class="badge badge-success">Completed</label></td> -->
+                          </tr>
+                          <tr>
+                            <td><h4>Friday</h4></td>
+                            <td><h4>Legs</h4></td>
+                            <td><h5>Front Squat<br><br>Bulgarian Split Squat<br><br>Squat<br><br>Dumbbell Stepup<br><br>Leg Press<br><br>Bodyweight Calf Raise<br><br>Jumping Calf Raise</h5></td>
+                            <td><a class="badge badge-info" style="font-size: 16px; background-color:#0B6D7D; border: none;" href="https://www.youtube.com/watch?v=B4dJIcF_vJI" target="_blank">Video Link</a></td>
+                            <!-- <td><label class="badge badge-warning">In progress</label></td> -->
+                          </tr>
+                          <tr>
+                            <td><h4>Saturday</h4></td>
+                            <td><h4>Triceps and Cardio</h4></td>
+                            <td><h5>Close-Grip Bench Press<br><br>Cable Rope Tricep Pushdown<br><br>Lying Triceps Extension<br><br>Tricep Dips<br><br>Bench Dip<br><br>Jump Rope<br><br>Kettlebells<br><br>Leg Raise<br><br>Plank</h5></td>
+                            <td><a class="badge badge-info" style="font-size: 16px; background-color:#0B6D7D; border: none;" href="https://www.youtube.com/watch?v=SuajkDYlIRw" target="_blank">Video Link</a></td>
+                            <!-- <td><label class="badge badge-warning">In progress</label></td> -->
+                          </tr>
+                          <tr>
+                            <td><h4>Sunday</h4></td>
+                            <td><h4>Rest and walk</h4></td>
+                            <td class="text-success">------</td>
+                            <td class="text-success">------</td>
+                            <!-- <td><label class="badge badge-warning">In progress</label></td> -->
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </center>
+         
+             
+          <!-- content-wrapper ends -->
+          <!-- partial:../../partials/_footer.html -->
+          <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020 <a href="https://www.bootstrapdash.com/" target="_blank">FitZone</a>. All rights reserved.</span>
+              <span class="text-muted float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="{ % static'assets/vendors/js/vendor.bundle.base.js' %}"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="{ % static'assets/js/off-canvas.js' %}"></script>
+    <script src="{ % static'assets/js/hoverable-collapse.js' %}"></script>
+    <script src="{ % static'assets/js/misc.js' %}"></script>
+    <script src="{ % static'assets/js/settings.js' %}"></script>
+    <script src="{ % static'assets/js/todolist.js' %}"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <!-- End custom js for this page -->
+    {% endblock content %}
+  

@@ -1,0 +1,61 @@
+{% extends "blog/dashboard_main.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<div class="main-panel">
+	<div class="content-wrapper">
+	  <div class="row">
+		<div class="col-12 grid-margin stretch-card">
+		  <div class="card corona-gradient-card">
+		  </div>
+		</div>
+    </div>
+    
+    <form action="" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      
+      <center>
+      <legend class="border-bottom mb-4">
+        Add your Meal
+    </legend>
+  </center>
+  <h4>
+    Please upload the image of your food. The calorie in the food will be calculated and if you know the calorie content of the food then please write it manullay.
+  </h4><br>
+      <fieldset class="form-group">
+        {{form.file}}
+      <!-- <input type="file" name="images" id="images" ><br> -->
+      <!-- <input type="text" id="fname" name="fname"><br><br> -->
+      <!-- <textarea id="w3review" name="w3review" rows="4" cols="50">
+        At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+        </textarea> -->
+        <!-- <button class="btn btn-primary btn-block enter-btn" name="automatic" type="submit"><i class="fa fa-upload"></i> Upload</button> -->
+      </fieldset>
+      <div class="text-center">
+        <button class="btn btn-primary btn-block enter-btn" name="automatic" type="submit"><i class="fa fa-upload"></i> Upload</button>
+    </div>
+    </form><br>
+  
+  <center>
+    <legend class="border-bottom mb-4">
+      OR
+  </legend>
+</center>
+    <center>
+          <form action="" method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+                   
+                    <fieldset class="form-group">
+    </center>
+                    {{form|crispy}}
+              </fieldset>
+              <div class="text-center">
+                  <button class="btn btn-primary btn-block enter-btn" name="manual" type="submit"><i class="fa fa-upload"></i> Upload</button>
+              </div>
+          </form><br>
+         
+      
+         
+        </div>
+</div>
+{% endblock content %}
